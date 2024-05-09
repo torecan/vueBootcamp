@@ -9,6 +9,7 @@ Interpolation
 which is the process of evaluating a string literal containing one or more placeholders, yielding a result in which the placeholders are replaced with their corresponding values.
 
 {{ 'Hello, ' + name + '!' }} is an interpolation example
+{{ 'Hello, ' + name + '!' }} is an interpolation example
 
 
 every Root need to just one Vue instance
