@@ -6,7 +6,15 @@
   </head>
   <body>
 
-    <div id="app"> {{ fullName() }} </div>
+    <div id="app" v-cloak >
+      <p>{{ fullName() }}</p>
+      <hr>
+
+      <label for="name"></label>
+      <input id="name" type="text"  v-model="name">
+
+
+    </div>
 
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
