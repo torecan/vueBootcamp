@@ -7,16 +7,20 @@
         <link rel="stylesheet" type="text/css" href="main.css"/>
     </head>
     <body>
-        <div id="app">
+        <div id="app" v-cloak>
             testMe
-            <p>
-                {{ name }}
-            </p>
+
+            
             <p>
                 {{ fullName() }}
             </p>
 
-            <button> Test Me </button>
+            <label for="name">Name</label>
+            <input type="text" v-model="name"/>
+
+            <label for="surname">Surname</label>
+            <input type="text" v-model="surname"/>
+
         </div>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <script src="app.js"></script>

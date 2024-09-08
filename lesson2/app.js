@@ -1,4 +1,4 @@
-Vue.createApp({
+const vm = Vue.createApp({
     data() {
         return {
             name: "Tore",
@@ -9,6 +9,9 @@ Vue.createApp({
     methods: {
         fullName() {
             return `${this.name} ${this.surname.toUpperCase()}`
+        }, 
+        increment() {
+            return this.age++;
         }
     }
 }).mount('#app')

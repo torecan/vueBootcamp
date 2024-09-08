@@ -4,7 +4,8 @@ Expressions are the code inside the curly brackets.
 {{ 1 + 1 }} is an expression example
 
 Interpolation
-which is the process of evaluating a string literal containing one or more placeholders, yielding a result in which the placeholders are replaced with their corresponding values.
+which is the process of evaluating a string literal containing one or more placeholders, 
+yielding a result in which the placeholders are replaced with their corresponding values.
 
 {{ 'Hello, ' + name + '!' }} is an interpolation example
 
@@ -28,7 +29,11 @@ v-html directive
 [v-cloak] -> prevent the display of the uncompiled mustache template
 
 
+Directives:
+changes element behavior and looks like an attribute
+
+v-cloak -> for first loading of the page
+
 Two way data binding
 v-model directive
-
 
