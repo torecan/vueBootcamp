@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <meta>
+    </meta>
+    <head>
+        <title>Vue Test</title>
+        <link rel="stylesheet" type="text/css" href="main.css"/>
+    </head>
+    <body>
+        <div id="app" v-cloak>
+            <p>
+                {{ fullName() }}
+            </p>
+
+            <label for="name">Name</label>
+            <input type="text" v-model="name"/>
+            
+            <label for="midname">Middle Name</label>
+            <input type="text" @keyup.enter="updateMiddleName" />
+ 
+            <!-- 
+            <label for="surname">Surname</label>
+            <input type="text" v-model="surname"/> -->
+
+            <label for="surname">Surname</label>
+            <!-- <input type="text" v-on:click />  -->
+            <input type="text" :value="surname" @input.stop="updateSurname('this is a message!... ', $event)"/> 
+
+
+            <p>{{ typeof age }}</p>
+            <input type="number" v-model="age">
+
+            <button @click="increment"> Inc </button>  
+            <button @click.13="age--"> Dec </button>  
+
+        </div>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

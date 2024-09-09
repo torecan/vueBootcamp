@@ -37,3 +37,5 @@ v-cloak -> for first loading of the page
 Two way data binding
 v-model directive
 
+
+
