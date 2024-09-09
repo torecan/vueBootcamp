@@ -39,3 +39,10 @@ v-model directive
 
 
 
+Computed 
+
+Computed properies never be async
+
+
+
+

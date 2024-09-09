@@ -1,0 +1,39 @@
+body {
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+[v-cloak] {
+    display: none;
+}
+
+
+.sphere {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-color: none;
+    background-color: lime;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.colorful {
+    background-color: red;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
