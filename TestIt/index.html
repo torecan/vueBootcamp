@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello</title>
+        <link rel="stylesheet" href="main.css" type="text/css" />
+
+    </head>
+
+    <body> 
+        <div id="app">
+            
+            <label>Size</label>
+            <input type="range" min="20" max="200" v-model="size" />
+
+            <label>Add Bg Color</label>
+            <input type="checkbox" v-model="isBgColor"/>
+            
+            <select v-model="fontColorize">
+                <option v-for="color in colors" 
+                :value="color" 
+                :key="color"
+                v-html="color"
+                > </option>
+            </select>
+
+            
+            <div class="sphere"
+            :class="[
+            bgClass, 
+            fontColorized
+            ]"
+
+            :style=" {
+                width: size + 'px', 
+                height: size + 'px',
+                fontSize: getFontSize
+            }" 
+
+            >Hi</div>
+            
+
+        </div>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
+

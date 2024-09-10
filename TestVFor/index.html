@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello</title>
+        <link rel="stylesheet" href="main.css" type="text/css" />
+
+    </head>
+
+    <body> 
+        <div id="app" v-cloak>
+            
+            <ul class="people">
+                <li class="person" v-for="person in people" :key="person.name+person.surname">
+                    <div>{{ person.name }}</div>
+                    <div>{{ person.surname }}</div>
+                    <div>{{ person.age }}</div>
+                    <input type="text" v-model="person.name" />
+                </li>
+            </ul>
+            
+            <button @click="movePeople">Shuffle</button>
+
+        </div>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
+
