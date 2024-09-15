@@ -1,0 +1,43 @@
+
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Vue Test</title>
+        <link rel="stylesheet" type="text/css" href="main.css"/>
+    </head>
+    <body>
+        <div id="app" v-cloak>
+            
+            <div class="allArea">
+                <div class="settings">
+                    <label>Rotate</label>
+                    <input type="range" min="-180" max="180" v-model="rotate">
+                  <label>Font Size</label>
+                    <input type="range" min="10" max="180" v-model="fontSize">
+
+                    <select v-model="selectedColor">
+                        <option v-for="color in colors" 
+                        :value="color" 
+                        :key="color"
+                        :selected="isSelected(color)"
+                        >
+                            {{ color }}
+                        </option>
+                    </select>
+                
+
+                </div>
+                <div class="sphere"
+                    :style="[getFontSize,getRotation,getBgColor]"
+                >
+                    Hi
+                </div>
+            </div>
+            <button @click="randomize">Random</button>
+            
+        </div>
+
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
