@@ -40,6 +40,8 @@ v-model directive
 Computed 
 Computed properies never be async
 
+Vite 
+Fast for modern projects. It doesnt bundle but quite fast for HMR (HOT MODULE REPLACEMENT) 
 
-
-
+Webpack 
+Needs to bundle the modules and packages. However performance problems during the development
