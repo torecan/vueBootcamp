@@ -13,30 +13,24 @@ const vm = Vue.createApp({
             this.rotateY = 0;
             this.rotateZ = 0;
             this.perspective = 20;
-        },
-        async copy() {
-            let text = `transform:${this.box.transform};`
-            console.log(text)
-
-            await navigator.clipboard.writeText(text);
-            alert("CSS Copied to Clipboard!")
-
-        }  
-
+        }, 
+        copy() {
+           let cssEx = `transform: ${this.box.transform}`;
+           navigator.clipboard.writeText(cssEx);
+        }
     }, 
     computed: {
-
         box() {
-            console.log("sksks")
             return {
-                transform: `
-                    perspective(${this.perspective}px)
-                    rotateX(${this.rotateX}deg)
-                    rotateY(${this.rotateY}deg)
-                    rotateZ(${this.rotateZ}deg)
+                transform:
                 `
-            }    
-        }    
-
+                perspective(${this.perspective}px)
+                rotateX(${this.rotateX}deg)
+                rotateY(${this.rotateY}deg)
+                rotateZ(${this.rotateZ}deg)
+                `
+            }
+        }
+ 
     }
 }).mount('#app')
