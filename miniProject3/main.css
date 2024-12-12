@@ -1,0 +1,33 @@
+body {
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.allArea {
+    gap: 15px;
+    flex-direction: column;
+
+    display: flex;
+    background-color: lavender;
+
+}
+
+.settings {
+    flex-direction: column;
+
+    display: flex;
+}
+
+.sphere {
+    width: 150px;
+    aspect-ratio: 1/1;
+
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+}

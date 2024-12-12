@@ -1,0 +1,35 @@
+
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Vue Test</title>
+        <link rel="stylesheet" type="text/css" href="main.css"/>
+    </head>
+    <body>
+        <div id="app" v-cloak>
+            
+        <div></div>
+        <label>Guess a number between 1 and 100</P></label>
+        <input 
+        type="text" 
+        @input="checkGuess" 
+
+        v-model.number="guess"
+        placeholder="Enter your guess"
+        />
+
+        <p> {{ message }} </p>
+        <p> Remaining guesses: {{ remainingGuesses }} </p>
+
+        <div>
+            <button @click="init">Play again</button>
+        </div>
+
+
+        </div>
+
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lodash/lodash.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
